@@ -1,0 +1,10 @@
+version: '3'
+services:
+  rtl_433:
+    image: hertzg/rtl_433
+    volumes:
+      - ./:/etc/rtl_433
+    devices:
+      - /dev/bus/usb/001/002
+    command: -c /etc/rtl_433/rtl_433.conf -F log -f 344975000
+
